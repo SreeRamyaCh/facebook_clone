@@ -1,16 +1,24 @@
 import React from "react";
 
-const header = () => {
+const header = ({ dark, children, className }) => {
+  dark = !!dark ? "dark" : "light";
   return (
-    <div>
-      <nav className="navbar navbar-light bg-light">
-        <div className="container">
-          <a className="navbar-brand" href="/">
-            <img src="/logo512.png" alt="" width="30" height="24" />
-          </a>
-        </div>
-      </nav>
-    </div>
+    <nav
+      className={`navbar navbar-${dark} bg-${dark} + (className ? "" + className : "")`}
+    >
+      <div className="container">
+        <a className="navbar-brand" href="/">
+          <img
+            src="/logo512.png"
+            alt={children + "Logo"}
+            width="30"
+            height="24"
+            className="me-2"
+          />
+          {children}
+        </a>
+      </div>
+    </nav>
   );
 };
 
