@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FBBox from "./Bootstrap/FBBox";
+//import FBBox from "./Bootstrap/FBBox";
 import Header from "./Bootstrap/Header";
 
 class App extends Component {
@@ -8,8 +8,10 @@ class App extends Component {
       <div className="App">
         <Header className="Header">Facebook Clone</Header>
         <div className="container">
-          <div className="col-6 offset-3">
-            <FBBox>Hello</FBBox>
+          <div className="row">
+            <div className="col-2">Left</div>
+            <div className="col-7">Middle</div>
+            <div className="col-3">Right</div>
           </div>
         </div>
       </div>
