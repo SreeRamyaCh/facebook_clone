@@ -2,6 +2,7 @@ import { Component } from "react";
 import Header from "./Bootstrap/Header";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
+import Main from "./Main";
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <Sidebar />
-            <div className="col-7">Middle</div>
+            <Main />
             <Feed />
           </div>
         </div>
