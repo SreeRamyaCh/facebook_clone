@@ -1,0 +1,17 @@
+.Feed {
+  .BirthdayContainer {
+    padding: 3px;
+    font-size: 0.85em;
+    img {
+      height: 1.25em;
+      position: relative;
+      top: -2px;
+      margin-right: 5px;
+    }
+    a {
+      font-weight: 600;
+      color: #006;
+      text-decoration: none;
+    }
+  }
+}
