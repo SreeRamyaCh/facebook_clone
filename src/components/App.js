@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 //import FBBox from "./Bootstrap/FBBox";
 import Header from "./Bootstrap/Header";
+import Sidebar from "./Sidebar";
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
         <Header className="Header">Facebook Clone</Header>
         <div className="container">
           <div className="row">
-            <div className="col-2">Left</div>
+            <Sidebar />
             <div className="col-7">Middle</div>
             <div className="col-3">Right</div>
           </div>
