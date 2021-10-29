@@ -13,4 +13,45 @@
       }
     }
   }
+  h3 {
+    text-decoration: uppercase;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 25px;
+  }
+  &-Links {
+    font-size: 0.9em;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      margin: 0 0 5px;
+      padding: 0;
+      list-style-type: none;
+      a {
+        display: block;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        &.active,
+        &:hover {
+          border: 1px solid #ddd;
+          background-color: rgba(#fff, 0.75);
+        }
+        position: relative;
+        padding: 3px;
+        padding-left: 28px;
+        text-decoration: none;
+        color: #333;
+        span {
+          left: 3px;
+          position: absolute;
+          display: inline-block;
+          transform: scale(4%);
+          transform-origin: 0 0;
+        }
+      }
+    }
+  }
 }
