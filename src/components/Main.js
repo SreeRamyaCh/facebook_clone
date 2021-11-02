@@ -1,5 +1,5 @@
 import React from "react";
-import FBBox from "./Bootstrap/FBBox";
+import FBBox from "./FBBox";
 
 const Main = () => {
   return (

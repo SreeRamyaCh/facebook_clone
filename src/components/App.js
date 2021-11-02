@@ -5,6 +5,30 @@ import Feed from "./Feed";
 import Main from "./Main";
 
 class App extends Component {
+  state = {
+    UserData: {
+      FullName: "Sree Ramya",
+      Avatar: "",
+      ProfileURL: "/",
+      Birthdays: [
+        {
+          FullName: "Datta Prasad",
+          ProfileURL: "/"
+        },
+        {
+          FullName: "Rama Krishna Rao",
+          ProfileURL: "/"
+        },
+        {
+          FullName: "SreeDevi",
+          ProfileURL: "/"
+        }
+      ],
+      Pages: [],
+      NewsFeed: []
+    },
+    FeedData: []
+  };
   render() {
     return (
       <div className="App">
@@ -13,7 +37,7 @@ class App extends Component {
           <div className="row">
             <Sidebar />
             <Main />
-            <Feed />
+            <Feed Birthdays={this.state.UserData.Birthdays} />
           </div>
         </div>
       </div>
