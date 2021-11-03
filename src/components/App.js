@@ -7,9 +7,12 @@ import Main from "./Main";
 class App extends Component {
   state = {
     UserData: {
-      FullName: "Sree Ramya",
-      Avatar: "",
-      ProfileURL: "/",
+      UserMeta: {
+        FullName: "Sree Ramya",
+        Avatar: "https://i.imgur.com/Zv2PKvEb.jpg",
+        ProfileURL: "/"
+      },
+
       Birthdays: [
         {
           FullName: "Datta Prasad",
@@ -40,7 +43,67 @@ class App extends Component {
           NotificationCount: "15"
         }
       ],
-      NewsFeed: []
+      NewsFeeds: [
+        {
+          Image: "https://i.imgur.com/nOT5zBD.jpeg",
+          NewsLink: "/",
+          Title: "Hello Kittens!!",
+          DateTime: "12th Sunday September 2021",
+          DatePosted: "Today"
+        },
+        {
+          Image: "https://i.imgur.com/BipVIkJ.jpeg",
+          NewsLink: "/",
+          Title: "Best Cat Pic",
+          DateTime: "12th Sunday September 2021",
+          DatePosted: "yesterday"
+        },
+        {
+          Image: "https://i.imgur.com/ZM5xWH9.jpeg",
+          NewsLink: "/",
+          Title: "Some cat Cute Stuff",
+          DateTime: "12th Sunday September 2021",
+          DatePosted: "2days ago"
+        }
+      ],
+      ContentList: {
+        Default: [
+          {
+            Link: "/",
+            Icon: "news",
+            Text: "News Feed"
+          },
+          {
+            Link: "/",
+            Icon: "chat",
+            Text: "Messager"
+          },
+          {
+            Link: "/",
+            Icon: "watch",
+            Text: "Watch"
+          },
+          {
+            Link: "/",
+            Icon: "market",
+            Text: "Marketplae"
+          }
+        ],
+        Shortcuts: [
+          {
+            Link: "/",
+            Icon: "web",
+            Text: "Personal Website"
+          }
+        ],
+        Explorer: [
+          {
+            Link: "/",
+            Icon: "yt",
+            Text: "Youtube Channel"
+          }
+        ]
+      }
     },
     FeedData: []
   };
@@ -50,11 +113,15 @@ class App extends Component {
         <Header className="Header">Facebook Clone</Header>
         <div className="container">
           <div className="row">
-            <Sidebar />
+            <Sidebar
+              ContentList={this.state.UserData.ContentList}
+              UserMeta={this.state.UserData.UserMeta}
+            />
             <Main />
             <Feed
               Birthdays={this.state.UserData.Birthdays}
               Pages={this.state.UserData.Pages}
+              NewsFeeds={this.state.UserData.NewsFeeds}
             />
           </div>
         </div>

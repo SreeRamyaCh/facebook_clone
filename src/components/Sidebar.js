@@ -1,52 +1,10 @@
 import React, { Fragment } from "react";
+import SidebarUserMeta from "./SidebarUserMeta";
 
-const sidebar = () => {
-  const ContentList = {
-    Default: [
-      {
-        Link: "/",
-        Icon: "news",
-        Text: "News Feed"
-      },
-      {
-        Link: "/",
-        Icon: "chat",
-        Text: "Messager"
-      },
-      {
-        Link: "/",
-        Icon: "watch",
-        Text: "Watch"
-      },
-      {
-        Link: "/",
-        Icon: "market",
-        Text: "Marketplae"
-      }
-    ],
-    Shortcuts: [
-      {
-        Link: "/",
-        Icon: "web",
-        Text: "Personal Website"
-      }
-    ],
-    Explorer: [
-      {
-        Link: "/",
-        Icon: "yt",
-        Text: "Youtube Channel"
-      }
-    ]
-  };
+const sidebar = ({ ContentList, UserMeta }) => {
   return (
     <div className="Sidebar col-2">
-      <div className="UserMeta">
-        <a href="/">
-          <img src="https://i.imgur.com/Zv2PKvEb.jpg" alt="Ramya" />
-          Ramya
-        </a>
-      </div>
+      <SidebarUserMeta {...UserMeta} />
       {Object.keys(ContentList).map(section => (
         <Fragment key={section}>
           {section !== "Default" && <h3>{section}</h3>}
