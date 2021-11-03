@@ -24,7 +24,22 @@ class App extends Component {
           ProfileURL: "/"
         }
       ],
-      Pages: [],
+      Pages: [
+        {
+          Avatar: "https://i.imgur.com/SrTKlVe.png",
+          PageURL: "/",
+          Name: "Edusera",
+          MessageCount: "20+",
+          NotificationCount: "20+"
+        },
+        {
+          Avatar: "https://i.imgur.com/QDBSMr2b.jpg",
+          PageURL: "/",
+          Name: "Zucku Mama",
+          MessageCount: "15",
+          NotificationCount: "15"
+        }
+      ],
       NewsFeed: []
     },
     FeedData: []
@@ -37,7 +52,10 @@ class App extends Component {
           <div className="row">
             <Sidebar />
             <Main />
-            <Feed Birthdays={this.state.UserData.Birthdays} />
+            <Feed
+              Birthdays={this.state.UserData.Birthdays}
+              Pages={this.state.UserData.Pages}
+            />
           </div>
         </div>
       </div>
