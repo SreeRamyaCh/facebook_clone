@@ -11,7 +11,12 @@ const sidebar = ({ ContentList, UserMeta }) => {
           <ul className="Sidebar-Links">
             {ContentList[section].map(link => (
               <li key={link.Icon}>
-                <a href={link.Link}>
+                <a
+                  href={link.Link}
+                  className={link.Icon === "news" ? "active" : null}
+                  target={link.Link !== "/" ? "_blank" : null}
+                  rel="noreferrer"
+                >
                   <span className={"Sprite-" + link.Icon} />
                   {link.Text}
                 </a>

@@ -14,6 +14,7 @@ class App extends Component {
     GetUserData().then(({ data: UserData }) => this.setState({ UserData }));
     GetWallData().then(({ data: WallData }) => this.setState({ WallData }));
   }
+
   render() {
     return (
       <div className="App">
